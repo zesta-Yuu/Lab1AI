@@ -1,28 +1,17 @@
-import json
-#import io
 import os
+import json
 
-path="data"
+json_folder = "data"  
 
-#file_name = "game-of-thrones-characters-groups.json"
-json_files = [os.path.join(root, name) 
-              for root, dirs, files in os.walk(path) 
-              for name in files 
-              if name.endswith((".json"))] #If we needed to read several files extensions: if name.endswith((".ext1", ".ext2"))
+repo_root = os.getcwd()
+full_json_folder = os.path.join(repo_root, json_folder)
 
-#print('Number of JSON files ready to be loaded: ' + str(len(json_files)))
+json_files = [os.path.join(root, name)
+              for root, dirs, files in os.walk(full_json_folder)
+              for name in files
+              if name.endswith(".json")]
 
-#print(json_files)
 
-#print('Path to the first file: '+json_files[0])
-
-#Open the file using the name of the json file witn open() function
-#Read the json file using load() and put the json data into a variable.
-if len(json_files) ==1:
-   with open(json_files[0]) as f:
-      json_data = json.load(f)
-else: print("failed")
-   
-
-#print(json_data)
-#print(json_data.keys()) #the top-level variable
+# --- Load the first JSON file ---
+with open(json_files[0], 'r', encoding='utf-8') as f:
+    json_data = json.load(f)
