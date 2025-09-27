@@ -66,7 +66,7 @@ GameOfThronesNet = Network (
                 bgcolor ="#242020",
                 font_color = "white",
                 height = "1000px",
-                width = "100%",
+                width = "1000px", #"100%",
                 notebook=False,
                 cdn_resources = "remote",
                 filter_menu=True 
@@ -75,8 +75,5 @@ GameOfThronesNet = Network (
 GameOfThronesNet.from_nx(g)  
 
 #print(GameOfThronesNet.nodes)
-
-options = '{"physics": {"enabled": true, "stabilization": {"enabled": true, "iterations": 1600, "fit": true}}, "interaction": {"navigationButtons": true}}'
-Network.set_options(options)
 
 GameOfThronesNet.show("Lab1_Taks2_GameOfThrones.html",notebook=False)
