@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 import graph
 #from . import Class_GameOfThronesGraph
 
@@ -28,9 +29,13 @@ with tab2:
 with tab3:
     st.header("Lab1. Task2")
     import streamlit.components.v1 as components
-    path_html = "Lab1_Taks2_GameOfThrones.html"
+    #need this for streamlit cloud
+    path_html = os.path.join(os.path.dirname(__file__), "Lab1_Taks2_GameOfThrones.html")
+
     with open(path_html, 'r', encoding='utf-8') as f:
         html_content = f.read()
-    components.html(html_content, height= 1010, scrolling=True) 
+
+    #width/heignht
+    components.html(html_content, width=900, height=1000) 
 
     
