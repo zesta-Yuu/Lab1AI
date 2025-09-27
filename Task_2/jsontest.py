@@ -8,7 +8,7 @@ json_filename = "game-of-thrones-characters-groups.json"
 
 json_path = os.path.join(script_dir, json_filename)
 
-# Open and load JSON
+#open and load file
 with open(json_path, 'r', encoding='utf-8') as f:
     json_data = json.load(f)
 
