@@ -35,6 +35,6 @@ with tab3:
         html_content = f.read()
 
     #width/heignht
-    components.html(html_content,height=900, width=810, scrolling=True)
+    components.html(html_content,height=900, scrolling=True)
 
     

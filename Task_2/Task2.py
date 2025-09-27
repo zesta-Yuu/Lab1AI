@@ -76,4 +76,8 @@ GameOfThronesNet.from_nx(g)
 
 #print(GameOfThronesNet.nodes)
 
+#to stabilize physics for streamlit
+options = '{"physics": {"enabled": true, "stabilization": {"enabled": true, "iterations": 1000, "fit": true}}}'
+Network.set_options(options)
+
 GameOfThronesNet.show("Lab1_Taks2_GameOfThrones.html",notebook=False)
