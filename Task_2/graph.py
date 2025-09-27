@@ -1,4 +1,4 @@
-import Class_GameOfThronesGraph
+from . import Class_GameOfThronesGraph
 
 import pandas as pd
 import matplotlib.pyplot as plt

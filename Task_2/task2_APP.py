@@ -1,6 +1,6 @@
 import streamlit as st
-import graph
-import Class_GameOfThronesGraph
+from . import graph
+from . import Class_GameOfThronesGraph
 
 #st.set_page_config(layout="wide") -> increases page width
 #title
