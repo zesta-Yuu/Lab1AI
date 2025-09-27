@@ -1,6 +1,6 @@
 import streamlit as st
-from . import graph
-from . import Class_GameOfThronesGraph
+import graph
+#from . import Class_GameOfThronesGraph
 
 #st.set_page_config(layout="wide") -> increases page width
 #title
@@ -10,14 +10,14 @@ tab1, tab2, tab3 = st.tabs(["Game of Thrones Houses", "Members of Houses", "Lab1
 
 with tab1:
     st.header("Game of Thrones Houses")
-    for house in Class_GameOfThronesGraph.GameOfThronesHouses:
+    for house in graph.Class_GameOfThronesGraph.GameOfThronesHouses:
         st.write(f'{house}: Strength {house.getStrength()}')
         #dynaties strength graph 
     st.pyplot(graph.fig)
     
 with tab2:
     st.header("Members of Houses")
-    for house in Class_GameOfThronesGraph.GameOfThronesHouses:
+    for house in graph.Class_GameOfThronesGraph.GameOfThronesHouses:
             st.write(f'{house}!')
             for person in house:
                 st.markdown(f'* {person} ')

@@ -1,8 +1,10 @@
 import Class_GameOfThronesGraph
 import networkx as nx
-g = nx.Graph() # graph initialization
 import seaborn as sns
 from pyvis.network import Network
+
+g = nx.Graph() # graph initialization
+
 
 
 N_houses=0

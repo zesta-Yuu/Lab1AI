@@ -1,5 +1,5 @@
 import json
-import io
+#import io
 import os
 
 path="data"
@@ -10,7 +10,7 @@ json_files = [os.path.join(root, name)
               for name in files 
               if name.endswith((".json"))] #If we needed to read several files extensions: if name.endswith((".ext1", ".ext2"))
 
-print('Number of JSON files ready to be loaded: ' + str(len(json_files)))
+#print('Number of JSON files ready to be loaded: ' + str(len(json_files)))
 
 #print(json_files)
 
