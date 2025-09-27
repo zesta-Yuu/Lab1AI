@@ -3,7 +3,6 @@ import os
 import graph
 #from . import Class_GameOfThronesGraph
 
-#st.set_page_config(layout="wide") -> increases page width
 #title
 st.title("Task2: infographic of relationships between characters in the Game of Thrones")
 #tabs for Game of thrones
@@ -36,6 +35,6 @@ with tab3:
         html_content = f.read()
 
     #width/heignht
-    components.html(html_content, height=1000) 
+    components.html(html_content,height=900, width=810, scrolling=True)
 
     
