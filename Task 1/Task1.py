@@ -1,5 +1,6 @@
 import pandas as pd
 from pyvis.network import Network
+import numpy as np
 #Loading the data
 data = pd.read_csv("game-of-thrones-battles.csv")
 #data.head()
@@ -40,7 +41,7 @@ filter_menu=True
 
 #Define nodes - the list of unique names of all kings. Hint: use Python set to avoid repetitions
 #print(sample.head())
-import numpy as np
+
 
 #  display lrg char per col
 pd.set_option('display.max_colwidth', None)

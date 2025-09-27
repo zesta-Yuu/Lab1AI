@@ -1,5 +1,5 @@
 
-import  jsontest 
+import jsontest 
 
 class Dynasty:
     def __init__(self,name):
