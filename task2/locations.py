@@ -1,0 +1,3 @@
+LOC_A = 'A'
+LOC_B = 'B'
+LOCATIONS = [LOC_A, LOC_B]
