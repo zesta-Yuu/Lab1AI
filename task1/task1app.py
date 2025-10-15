@@ -8,7 +8,7 @@ from src.naigationEnvironmentClass import NavigationEnvironment
 #init images
 imageDir= "images"
 boatObjects = ["wolf", "goat", "cabbage", "boat"]
-images = {name: os.path.join(imageDir, f"{name}.png") for name in boatObjects}
+imagespng = {name: os.path.join(imageDir, f"{name}.png") for name in boatObjects}
 
 #display images
 def display_state(state):
@@ -20,7 +20,7 @@ def display_state(state):
         st.markdown("### Left Bank")
         for obj, pos in zip(boatObjects, state):
             if pos == "L":
-                st.image(images[obj], caption=obj.capitalize(), width=70)
+                st.image(imagespng[obj], caption=obj.capitalize(), width=70)
 
     with river_col:
         st.markdown("### River")
@@ -29,7 +29,7 @@ def display_state(state):
         st.markdown("### Right Bank")
         for obj, pos in zip(boatObjects, state):
             if pos == "R":
-                st.image(images[obj], caption=obj.capitalize(), width=70)
+                st.image(imagespng[obj], caption=obj.capitalize(), width=70)
 
 # run agent step
 def AgentStep():

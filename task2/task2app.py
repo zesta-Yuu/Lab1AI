@@ -1,9 +1,9 @@
 # Import dependencies
 import streamlit as st
-import streamlit.components.v1 as components #to display the HTML code
+import streamlit.components.v1 as components 
 
-import networkx as nx #Networkx for creating graph data
-from pyvis.network import Network #to create the graph as an interactive html object
+import networkx as nx 
+from pyvis.network import Network 
 
 
 from src.graphClass import Graph
