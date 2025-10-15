@@ -62,7 +62,7 @@ def AgentStep():
             st.success(f"Agent at {a.state} and simulation is complete.")
 
 def main():
-    st.title("Resolving Wolf, Goat, and Cabbage Problem..")
+    st.title("Resolving Wolf, Goat, Cabbage and Boat Problem..")
     st.markdown("Each state shows where (WGCB): wolf, goat, cabbage, and boat are (Left/Right bank).")
 
 
