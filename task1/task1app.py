@@ -6,7 +6,8 @@ from src.agents import ProblemSolvingBoatAgentBFS
 from src.naigationEnvironmentClass import NavigationEnvironment
 
 #init images
-imageDir= "images"
+base_Dir = os.path.dirname(__file__)
+imageDir = os.path.join(base_Dir, "images")
 boatObjects = ["wolf", "goat", "cabbage", "boat"]
 imagespng = {name: os.path.join(imageDir, f"{name}.png") for name in boatObjects}
 
