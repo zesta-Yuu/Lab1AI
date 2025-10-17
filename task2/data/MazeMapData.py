@@ -4,7 +4,7 @@ import random
 MazeData=dict(
 #S=dict(J1=9),
 J1=dict(S=9,J2=8, J3=2),
-#J2 = dict(J1=9),
+J2 = dict(J1=9),
 J3 = dict(J7=4, J4=4),
 J4 = dict(J12=2,J6=4),
 ##I removed J5/J8
