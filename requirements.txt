@@ -1,3 +1,6 @@
 streamlit
 pyvis
+matplotlib
+panda
+numpy
 networkx
