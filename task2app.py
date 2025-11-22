@@ -223,7 +223,7 @@ def run_solver_and_setup_cache():
     return STEPS, csp, asterisk_indices
 
 def draw_board(assignment, asterisk_indices, initial_csp):
-    """Renders the Sudoku board with Asterisk highlighting."""
+    #the Sudoku board highlighting
     st.markdown(
         """
         <style>
@@ -255,7 +255,7 @@ def draw_board(assignment, asterisk_indices, initial_csp):
 
     board_html = '<div class="sudoku-container"><div class="sudoku-grid">'
     
-    # Identify fixed (prefilled) cells
+    # Identify fixed  cells
     prefilled = {
         var: initial_csp.domains[var][0] 
         for var in initial_csp.variables if len(initial_csp.domains[var]) == 1
@@ -264,12 +264,12 @@ def draw_board(assignment, asterisk_indices, initial_csp):
     for i in range(81):
         r, c = divmod(i, 9)
         
-        # Determine CSS classes
+        # Determine classes
         classes = ["cell"]
         if (c + 1) % 3 == 0 and c != 8: classes.append("cell-thick-right")
         if (r + 1) % 3 == 0 and r != 8: classes.append("cell-thick-bottom")
         
-        # Highlight Asterisk Cells
+        # Highlight asterisk cells
         if i in asterisk_indices:
             classes.append("cell-asterisk")
         
@@ -337,10 +337,10 @@ with c4:
         st.session_state['step_index'] = MAX_STEPS
         st.rerun()
 
-# Draw Board
+# draw board
 st.write(f"**Current Step Index:** {current_step_index} / {MAX_STEPS}")
 draw_board(current_assignment, asterisk_indices, initial_csp)
 
-# Solution Message
+#sol msg
 if current_step_index == MAX_STEPS:
-    st.success("✅ **Solution Complete!** The Asterisk constraint (Yellow cells 1-9 unique) is satisfied.")
+    st.success("**Solution Complete!** The Asterisk constraint (aestrixked cells in yellow) is satisfied.")
